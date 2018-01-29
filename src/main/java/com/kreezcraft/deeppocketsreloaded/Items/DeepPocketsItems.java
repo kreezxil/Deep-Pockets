@@ -3,6 +3,7 @@ package com.kreezcraft.deeppocketsreloaded.Items;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.kreezcraft.deeppocketsreloaded.DeepPockets;
 import com.kreezcraft.deeppocketsreloaded.PackModel;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -23,18 +24,21 @@ public class DeepPocketsItems
 	
 	public static void registerItems()
 	{
-		GameRegistry.register(miningPack);
-		GameRegistry.register(advancedMiningPack);
+		miningPack.registerModels();
+		advancedMiningPack.registerModels();
+//		GameRegistry.register(miningPack);
+//		GameRegistry.register(advancedMiningPack);
 	}
 	
+   
 	public static void registeryRenderers()
 	{
 		List<ModelResourceLocation> packModels = new ArrayList<ModelResourceLocation>();
 		List<ModelResourceLocation> advancedPackModels = new ArrayList<ModelResourceLocation>();
 		for(int i = 1; i <= 4; i++)
 		{
-			packModels.add(new ModelResourceLocation("miningpack:miningpack" + i, "inventory"));
-			advancedPackModels.add(new ModelResourceLocation("miningpack:advancedminingpack" + i, "inventory"));
+			packModels.add(new ModelResourceLocation("deeppockets:miningpack" + i, "inventory"));
+			advancedPackModels.add(new ModelResourceLocation("deeppockets:advancedminingpack" + i, "inventory"));
 		}
 		
 		ModelLoader.registerItemVariants(miningPack, packModels.toArray(new ModelResourceLocation[packModels.size()]));

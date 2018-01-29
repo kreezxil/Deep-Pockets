@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import com.kreezcraft.deeppocketsreloaded.DeepPockets;
 import com.kreezcraft.deeppocketsreloaded.DeepPocketsConfig;
 import com.kreezcraft.deeppocketsreloaded.proxy.compatability.Compatability;
 
@@ -398,4 +399,8 @@ public class ItemMiningPack extends Item
     		}
     	}
     }
+    public void registerModels() {
+    	DeepPockets.proxy.registerItemRenderer(this, 0, "inventory");
+    }
+
 }

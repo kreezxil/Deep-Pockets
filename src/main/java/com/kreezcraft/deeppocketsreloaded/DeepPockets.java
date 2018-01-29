@@ -13,16 +13,17 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = DeepPockets.MODID, version = DeepPockets.VERSION, acceptedMinecraftVersions = "[1.10,1.12)")
+@Mod(modid = DeepPockets.MODID, version = DeepPockets.VERSION, name = DeepPockets.NAME)
 public class DeepPockets
 {
     public static final String MODID = "deeppockets";
-    public static final String VERSION = "0.1";
+    public static final String NAME = "Deep Pockets Reloaded";
+    public static final String VERSION = "@VERSION@";
 
 	@Mod.Instance(MODID)
 	public static DeepPockets instance;
 	
-	@SidedProxy(serverSide = "com.rebelkeithy.deeppockets.proxy.CommonProxy", clientSide = "com.rebelkeithy.deeppockets.proxy.ClientProxy")
+	@SidedProxy(serverSide = "com.kreezcraft.deeppocketsreloaded.proxy.CommonProxy", clientSide = "com.kreezcraft.deeppocketsreloaded.proxy.ClientProxy")
 	public static CommonProxy proxy;
 	
     @EventHandler
@@ -41,7 +42,7 @@ public class DeepPockets
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	Recipes.registerRecipies();
+    	//Recipes.registerRecipies();
     	
     	MinecraftForge.EVENT_BUS.register(new ItemPickupEvent());
     }

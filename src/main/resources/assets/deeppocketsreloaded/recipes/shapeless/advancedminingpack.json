@@ -1,0 +1,11 @@
+{
+    "type": "forge:ore_shapeless",
+    "ingredients": [
+       {
+            "item": "deeppockets:advancedminingpack"
+        }
+    ],
+    "result": {
+        "item": "deeppockets:advancedminingpack"
+    }
+}

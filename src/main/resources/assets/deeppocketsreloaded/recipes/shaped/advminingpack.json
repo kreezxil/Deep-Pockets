@@ -1,0 +1,19 @@
+{
+    "type": "forge:ore_shaped",
+    "pattern": [
+        "EPE",
+        "P P",
+        "EPE"
+    ],
+    "key": {
+        "E": {
+            "item": "minecraft:ender_eye"
+        },
+        "P": {
+            "item": "deeppockets:miningpack"
+        }
+    },
+    "result": {
+        "item": "deeppockets:advancedminingpack"
+    }
+}

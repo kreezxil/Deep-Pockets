@@ -53,7 +53,8 @@ public class Compatability {
 	{
 		if(version == 11)
 		{
-			Method m = ReflectionHelper.findMethod(ItemStack.class, stack, new String[] {"func_190920_e", "setCount"}, int.class);
+			Method m = ReflectionHelper.findMethod(ItemStack.class, "func_190920_e", "setCount", int.class);
+			//Method m = ReflectionHelper.findMethod(ItemStack.class, stack, new String[] {"func_190920_e", "setCount"}, int.class);
 			try {
 				m.invoke(stack, count);
 			} catch (IllegalAccessException e) {
@@ -82,7 +83,8 @@ public class Compatability {
 	{
 		if(version == 11)
 		{
-			Method m = ReflectionHelper.findMethod(ItemStack.class, stack, new String[] {"func_190916_E", "getCount"});
+			//Method m = ReflectionHelper.findMethod(ItemStack.class, stack, new String[] {"func_190916_E", "getCount"});
+			Method m = ReflectionHelper.findMethod(ItemStack.class, "func_190916_E", "getCount", int.class);
 			try {
 				return (Integer) m.invoke(stack);
 			} catch (IllegalAccessException e) {
@@ -114,7 +116,8 @@ public class Compatability {
 		if(version == 11)
 		{
 			try {
-				Method m = ReflectionHelper.findMethod(ItemStack.class, stack, new String[] {"b", "func_190926_b", "isEmpty"});
+				//Method m = ReflectionHelper.findMethod(ItemStack.class, stack, new String[] {"b", "func_190926_b", "isEmpty"});
+				Method m = ReflectionHelper.findMethod(ItemStack.class, "func_190926_b", "isEmpty", boolean.class);
 				return (Boolean) m.invoke(stack);
 			} catch (SecurityException e) {
 				e.printStackTrace();

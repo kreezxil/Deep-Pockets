@@ -18,7 +18,7 @@ public class PackModel implements ItemMeshDefinition  {
 			
 			int items = pack.getTotalItems(stack);
 			int i = Math.min(1+items/128, 4);
-			return new ModelResourceLocation("miningpack:miningpack" + i, "inventory");
+			return new ModelResourceLocation("deeppockets:miningpack" + i, "inventory");
 		}
 
 		if(stack.getItem() == DeepPocketsItems.advancedMiningPack)
@@ -27,7 +27,7 @@ public class PackModel implements ItemMeshDefinition  {
 			
 			int items = pack.getTotalItems(stack);
 			int i = Math.min(1+items/128, 4);
-			return new ModelResourceLocation("miningpack:advancedminingpack" + i, "inventory");
+			return new ModelResourceLocation("deeppockets:advancedminingpack" + i, "inventory");
 		}
 		
 		return null;
